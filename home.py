@@ -7,7 +7,7 @@ file = open('model.pkl', 'rb')
 model = pickle.load(file)
 
 
-@app.route('/', methods=['get', 'post'])
+@app.route('/')
 def home():
     return render_template('home.html')
 
