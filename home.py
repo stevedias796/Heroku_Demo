@@ -17,8 +17,8 @@ def result():
     input_features = [int(x) for x in request.form.values()]
     features = [np.array(input_features)]
     result = model.predict(features)
-    #output = round(result, 2)
-    return render_template('home.html', param='Predicted Salary is Rs. {}'.format(result[0]))
+    output = round(result[0], 2)
+    return render_template('home.html', param='Predicted Salary is Rs. {}'.format(output))
 
 
 if __name__ == '__main__':
